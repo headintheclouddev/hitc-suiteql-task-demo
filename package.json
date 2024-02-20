@@ -1,0 +1,10 @@
+{
+  "name": "hitc-suiteql-task-demo",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@hitc/netsuite-types": "^2023.2.10",
+    "typescript": "^5.3.3"
+  },
+  "private": true,
+  "readme": "HITC SuiteQL Task to Map/Reduce Geocoder Demo"
+}
