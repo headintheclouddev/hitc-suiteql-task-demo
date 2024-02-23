@@ -32,7 +32,7 @@ export const map: EntryPoints.MapReduce.map = (context) => {
   log.debug(`map ${context.key}`, context.value);
   try {
     const customer = JSON.parse(context.value) as { customerId: string, address: string };
-    const apiKey = 'AIzaSyDHcwOA32_zlb79CkGGYXU2bV9InyGmTTE'; // TODO: Insert your Google API key here
+    const apiKey = 'xxx'; // TODO: Insert your Google API key here
     const googleResponse = https.get({
       url: `https://maps.googleapis.com/maps/api/geocode/json?address=${customer.address}&key=${apiKey}`
     });
