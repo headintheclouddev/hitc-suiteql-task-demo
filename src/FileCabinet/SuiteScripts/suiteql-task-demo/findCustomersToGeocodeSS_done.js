@@ -16,8 +16,7 @@ define(["require", "exports", "N/log", "N/task"], function (require, exports, lo
             query: `
       SELECT customer.id, entityid, REPLACE(addrtext, CHR(10), ' ') AS address
       FROM customer
-      LEFT OUTER JOIN EntityAddressbook AS AddressBook ON AddressBook.Entity = Customer.ID AND AddressBook.defaultbilling = 'T'
-      LEFT OUTER JOIN EntityAddress AS address ON address.nkey = AddressBook.AddressBookAddress
+      JOIN EntityAddress ON entityAddress.nkey = defaultShippingAddress
       WHERE custentity_hitc_maps_latitude IS NULL AND isInactive = 'F' AND addr1 IS NOT NULL
     `,
         });
