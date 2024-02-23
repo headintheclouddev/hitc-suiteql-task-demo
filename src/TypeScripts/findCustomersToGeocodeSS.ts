@@ -9,5 +9,6 @@
 import log = require('N/log');
 
 export function execute() {
+
   log.audit('execute', `Execution finished at ${new Date()}.`);
 }
